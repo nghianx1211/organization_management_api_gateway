@@ -1,23 +1,2 @@
 server:
   port: 8081
-
-spring:
-  application:
-    name: api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: employee-service
-          uri: http://localhost:8080 # Backend service URL (Replace with actual backend address)
-          predicates:
-            - Path=/employee/** # Routes requests starting with /employee to the backend
-          metadata:
-            cors:
-              allowedOrigins: 'http://localhost:3000'
-              allowedMethods:
-                - GET
-                - POST
-                - PUT
-                - DELETE
-                - OPTIONS
-              allowedHeaders: '*'

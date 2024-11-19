@@ -1,0 +1,8 @@
+name: "organization_management"
+services:
+  api-gateway:
+    image: meanori/organization-management-api-gateway
+    container_name: api-gateway
+    ports:
+      - "8081:8081"
+
